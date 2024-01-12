@@ -1,0 +1,282 @@
+.mainContainer {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  transition: grid-template-columns 0.3s ease-in-out;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.mainContainer aside {
+  display: grid;
+  grid-template-rows: 10% 90%;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 3px -1px 5px 0px rgba(0, 0, 0, 0.17);
+}
+
+.mainContainer aside .brand {
+  padding: 0 12px;
+  align-items: center;
+}
+
+.mainContainer aside .brand img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mainContainer aside nav {
+  width: 270px;
+}
+
+.mainContainer aside nav menu {
+  padding: 0;
+}
+
+.mainContainer aside nav menu ul {
+  width: 100%;
+}
+
+.mainContainer aside nav menu ul li {
+  width: 100%;
+  white-space: nowrap;
+  line-height: 40px;
+}
+
+.mainContainer aside nav menu ul li a {
+  font-size: 18px;
+  color: #2a3547;
+}
+
+.mainContainer aside nav menu ul li i {
+  font-size: 20px;
+  color: #2a3547;
+}
+
+.mainContainer aside nav menu ul li:hover {
+  background-color: #f47a20;
+}
+
+.mainContainer aside nav menu ul li:hover i {
+  color: white;
+}
+
+.mainContainer aside nav menu ul li:hover a {
+  color: white;
+}
+
+.mainContainer.sidebar-reduced {
+  grid-template-columns: 95px 1fr;
+}
+
+.mainContainer.sidebar-reduced aside {
+  width: 95px;
+  transition: width 0.3s ease-in-out !important;
+  display: grid;
+  grid-template-rows: 10% 90%;
+  z-index: 1;
+}
+
+.mainContainer.sidebar-reduced aside nav menu {
+  width: 95px;
+  padding: 0 12px;
+  overflow: hidden;
+}
+
+.mainContainer.sidebar-reduced aside nav menu ul li i {
+  margin-left: 20px;
+}
+
+.mainContainer.sidebar-reduced aside nav menu ul li a {
+  margin-left: 100px;
+}
+
+.mainContainer.sidebar-reduced aside:hover {
+  width: 270px;
+}
+
+.mainContainer.sidebar-reduced aside:hover nav menu {
+  width: 100%;
+  height: 100%;
+  padding: 0 12px;
+  overflow: hidden;
+}
+
+.mainContainer.sidebar-reduced aside:hover nav menu ul li i {
+  margin-left: 0px;
+}
+
+.mainContainer.sidebar-reduced aside:hover nav menu ul li a {
+  margin-left: 0px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .mainContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .mainContainer.sidebar-reduced {
+    grid-template-columns: 100px 1fr;
+  }
+
+  .content header .menuTogler,
+  .content header .profil {
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+  }
+
+  .mainContainer aside .brand img {
+    max-width: 35%;
+    max-height: 60%;
+  }
+}
+
+@media (max-width: 767px) {
+  .mainContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .mainContainer.sidebar-reduced {
+    grid-template-columns: 100px 1fr;
+  }
+
+  .content header .menuTogler,
+  .content header .profil {
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+  }
+
+  .mainContainer aside .brand img {
+    max-width: 35%;
+    max-height: 60%;
+  }
+}
+
+.content {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 10% 90%;
+}
+
+header {
+  box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.03);
+}
+
+.content header .menuTogler,
+.content header .profil {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.4s ease;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.content header .menuTogler:hover,
+.content header .profil:hover {
+  background-color: #f5f5f5;
+}
+
+.content .dynamicContent {
+  display: grid;
+  grid-template-rows: 30% 70%;
+}
+
+.content .dynamicContent .dynamicContentTop {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 66% 32%;
+  justify-content: space-between;
+}
+
+.content .dynamicContent .dynamicContentTop .dynamicContentTopItem {
+  border-radius: 12px;
+  background-color: #e8f7ff;
+  padding: 5px;
+}
+
+.content .dynamicContent .dynamicContentBottom {
+  display: grid;
+  grid-template-columns: 66% 32%;
+  column-gap: 2%;
+}
+
+.content .dynamicContent .dynamicContentBottom .dynamicContentBottomLeft {
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.03);
+}
+
+.content .dynamicContent .dynamicContentBottom .dynamicContentBottomRight {
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .dynamicContent .dynamicContentBottom .dynamicContentBottomRight .dynamicContentBottomRightCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.content .dynamicContent .dynamicContentBottom .dynamicContentBottomRight .dynamicContentBottomRightCard .dynamicContentBottomRightCardItem {
+  width: 195px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.content .dynamicContent .dynamicContentBottom .dynamicContentBottomRight .dynamicContentBottomRightCard .dynamicContentBottomRightCardItem.blue {
+  background: rgba(93, 135, 255, 0.27);
+}
+
+.content .dynamicContent .dynamicContentBottom .dynamicContentBottomRight .dynamicContentBottomRightCard .dynamicContentBottomRightCardItem.orange {
+  background-color: rgba(244, 185, 32, 0.25);
+}
+
+.content .dynamicContent .dynamicContentBottom .dynamicContentBottomRight .dynamicContentBottomRightCard .dynamicContentBottomRightCardItem.green {
+  background-color: rgba(39, 174, 96, 0.2);
+}
+
+.content .dynamicContent .dynamicContentBottom .dynamicContentBottomRight .dynamicContentBottomRightCard .dynamicContentBottomRightCardItem.red {
+  background-color: rgba(235, 87, 87, 0.2);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .content header .menuTogler,
+  .content header .profil {
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+  }
+
+  .mainContainer aside .brand img {
+    max-width: 35%;
+    max-height: 60%;
+  }
+}
+
+@media (max-width: 767px) {
+  .content header .menuTogler,
+  .content header .profil {
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+  }
+
+  .mainContainer aside .brand img {
+    max-width: 35%;
+    max-height: 60%;
+  }
+}
